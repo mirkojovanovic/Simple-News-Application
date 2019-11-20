@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Heading" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/rv_item_heading_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>

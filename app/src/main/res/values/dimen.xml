@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rv_item_layout_margin">16dp</dimen>
+    <dimen name="rv_item_heading_text_size">24sp</dimen>
+    <dimen name="rv_item_right_element_padding_left">16dp</dimen>
+</resources>

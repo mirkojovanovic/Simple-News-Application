@@ -52,6 +52,12 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             Glide.with(context)
                     .load(newsPost.getImage())
                     .into(thumbnailViewHolder.thumbnailImageView);
+        } else {
+            TextViewHolder textViewHolder = (TextViewHolder) holder;
+
+            textViewHolder.headingTextView.setText(newsPost.getTitle());
+
+            textViewHolder.descriptionTextView.setText(context.getString(R.string.ellipsize, newsPost.getDescription().substring(0,80)));
         }
     }
 
@@ -81,8 +87,15 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     static class TextViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.text_layout_heading)
+        TextView headingTextView;
+
+        @BindView(R.id.text_layout_description)
+        TextView descriptionTextView;
+
         TextViewHolder(@NonNull View itemView) {
             super(itemView);
+            ButterKnife.bind(this, itemView);
         }
     }
 }

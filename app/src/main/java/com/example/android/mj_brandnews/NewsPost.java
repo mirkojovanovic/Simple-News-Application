@@ -6,11 +6,11 @@ public class NewsPost {
     private String image;
     private int type;
 
-    public NewsPost(String title, String description, String image, int type) {
+    public NewsPost(String title, String description, String image) {
         this.title = title;
         this.description = description;
         this.image = image;
-        this.type = type;
+        this.type = (image == null || image.length() == 0) ? 1 : 0;
     }
 
     public String getTitle() {
@@ -39,9 +39,5 @@ public class NewsPost {
 
     public int getType() {
         return type;
-    }
-
-    public void setType(int type) {
-        this.type = type;
     }
 }

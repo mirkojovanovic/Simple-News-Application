@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MJ_BrandNews</string>
+    <string name="ellipsize">%1$s&#8230;</string>
 </resources>
